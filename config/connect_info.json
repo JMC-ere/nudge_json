@@ -1,0 +1,31 @@
+{
+  "maria_db" : {
+    "host" : "121.125.71.189",
+    "port" : "3306",
+    "db" : "nudge_admin",
+    "user" : "nudge_admin",
+    "password" : "admin!#189",
+    "sql" : "SELECT * FROM (SELECT seg_id, seg_name, nudge_type, suggest_id, polling_time, exposure_name, set_slot_cnt, exposure_id, nudge_id, nudge_name, suggest_name, TYPE, Ifnull(manual_text, '') manual_text, ext_info, wait_time, slot_cnt, menu_id, icon_id, slot_idx FROM nudge_v524.nudge_setting_v WHERE Date_format(Date_add(Now(), interval + 1 DAY), '%Y%m%d') BETWEEN start_dt AND end_dt) v WHERE NOT v.manual_text = '[\"hide\"]' "
+  },
+  "elastic" : {
+    "url" : "http://1.255.145.176:9200",
+    "DEV_POLICY": ["1.255.145.176", "1.255.145.177", "1.255.145.178"],
+    "PROD_POLICY": ["121.125.71.151", "121.125.71.152", "121.125.71.153", "121.125.71.154", "121.125.71.155"],
+    "POLICY_1" : "121.125.71.151",
+    "POLICY_2" : "121.125.71.152",
+    "POLICY_3" : "121.125.71.153",
+    "POLICY_4" : "121.125.71.154",
+    "POLICY_5" : "121.125.71.155",
+    "PORT" : 9200,
+    "USER": "elastic",
+    "PWD": "X7XsyxLzbrFDFMyOy3Wd"
+  },
+  "maria_db_dev" : {
+    "host" : "1.255.144.64",
+    "port" : "3306",
+    "db" : "nudge",
+    "user" : "nudge_1",
+    "password" : "0000",
+    "sql" : "SELECT * FROM (SELECT seg_id, seg_name, nudge_type, suggest_id, polling_time, exposure_name, set_slot_cnt, exposure_id, nudge_id, nudge_name, suggest_name, TYPE, Ifnull(manual_text, '') manual_text, ext_info, wait_time, slot_cnt, menu_id, icon_id, slot_idx FROM nudge_v524.nudge_setting_v WHERE Date_format(Date_add(Now(), interval + 1 DAY), '%Y%m%d') BETWEEN start_dt AND end_dt) v WHERE NOT v.manual_text = '[\"hide\"]' "
+  }
+}
